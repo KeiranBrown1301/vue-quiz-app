@@ -21,7 +21,7 @@ watch(search, () => {
       <input v-model.trim="search" type="text" placeholder="Search..." />
     </header>
     <div class="options-container">
-      <Card v-for="quiz in quizes" :key="quiz.id" />
+      <Card v-for="quiz in quizes" :key="quiz.id" :quiz="quiz" />
       <!-- <div v-for="quiz in quizes" :key="quiz.id" class="card">
         <img :src="quiz.img" alt="image of quiz subject" />
         <div class="card-text">
