@@ -19,6 +19,24 @@
             <p>NaCl</p>
           </div>
         </div>
+        <div class="option">
+          <p class="option-label">B</p>
+          <div class="option-value">
+            <p>NaCl</p>
+          </div>
+        </div>
+        <div class="option">
+          <p class="option-label">C</p>
+          <div class="option-value">
+            <p>NaCl</p>
+          </div>
+        </div>
+        <div class="option">
+          <p class="option-label">D</p>
+          <div class="option-value">
+            <p>NaCl</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
