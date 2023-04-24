@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <header>
     <h4>Question 1/3</h4>
