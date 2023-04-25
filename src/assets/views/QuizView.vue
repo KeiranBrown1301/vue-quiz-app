@@ -10,11 +10,6 @@ const quizId = parseInt(route.params.id);
 const quiz = quizzes.find((q) => q.id === quizId);
 const currentQuestionIndex = ref(0);
 
-// Here computed is used as the equivilant of what is belw with the questionStatus and watch use.
-const questionStatus = computed(
-  () => `${currentQuestionIndex.value}/${quiz.questions.length}`
-);
-
 // const questionStatus = ref(
 //   `${currentQuestionIndex.value}/${quiz.questions.length}`
 // );
@@ -24,11 +19,23 @@ const questionStatus = computed(
 //     questionStatus.value = `${currentQuestionIndex.value}/${quiz.questions.length}`;
 //   }
 // );
+
+// Here computed is used as the equivilant of what is above with the questionStatus and watch use.
+const questionStatus = computed(
+  () => `${currentQuestionIndex.value}/${quiz.questions.length}`
+);
+
+const barPercentage = computed(
+  () => `${(currentQuestionIndex.value / quiz.questions.length) * 100}%`
+);
 </script>
 
 <template>
   <div>
-    <QuizHeader :questionStatus="questionStatus" />
+    <QuizHeader
+      :questionStatus="questionStatus"
+      :barPercentage="barPercentage"
+    />
     <div>
       <Question :question="quiz.questions[currentQuestionIndex]" />
     </div>
